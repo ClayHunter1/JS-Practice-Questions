@@ -13,7 +13,13 @@ const copyFile = (file) => {
     const oldFileName = file.title;
     const newFileName = `Copy of ${oldFileName}`
     const currentTime = dateObject.getTime();
-    return [newFileName, currentTime];
+
+    return {
+        title: newFileName,
+        author: 'John Smith',
+        created_date: currentTime,
+        text: 'example text'
+    }
 };
 
 console.log(copyFile(file))
