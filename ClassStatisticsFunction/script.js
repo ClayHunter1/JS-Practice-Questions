@@ -28,9 +28,19 @@ const peterRecords = {
     }
 }
 
-const mathScores = [janeRecords.grades.math,johnRecords.grades.math,peterRecords.grades.math]
-const scienceScores = [janeRecords.grades.science,johnRecords.grades.science,peterRecords.grades.science]
-const englishScores = [janeRecords.grades.english,johnRecords.grades.english,peterRecords.grades.english]
+const allRecords = [janeRecords, johnRecords, peterRecords];
+
+const mathGrades = allRecords.map((record) => {
+    return record.grades.math;
+})
+
+const scienceGrades = allRecords.map((record) => {
+    return record.grades.science;
+})
+
+const englishGrades = allRecords.map((record) => {
+    return record.grades.english;
+})
 
 function average(numbers) {
     let sum = numbers.reduce((accumulator, currentValue) => {
@@ -40,11 +50,10 @@ function average(numbers) {
     return avg;
 }
 
-const mathAverage = average(mathScores);
-const scienceAverage = average(scienceScores);
-const englishAverage = average(englishScores);
+const gradeLevelSix = grades.filter();
 
 function printStats() {
-    return
-    [math = mathAverage,science = scienceAverage,english = englishAverage]
+    console.log(`Math Average: ${mathAverage}`, `Science Average: ${scienceAverage}`, `English Average: ${englishAverage}`)
+
+    console.log()
 }
